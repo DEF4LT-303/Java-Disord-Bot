@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="net.dv8tion.jda.api.AccountType"/>
+<fullyQualifiedTypeName name="net.dv8tion.jda.api.OnlineStatus"/>
+<fullyQualifiedTypeName name="net.dv8tion.jda.api.entities.Activity"/>
+<fullyQualifiedTypeName name="net.dv8tion.jda.api.entities.Activity.Emoji"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="tato_bot_commands.Info"/>
+<fullyQualifiedTypeName name="java.security.Permission"/>
+<fullyQualifiedTypeName name="java.security.acl.Permission"/>
+<fullyQualifiedTypeName name="com.mashape.unirest.http.Unirest"/>
+<fullyQualifiedTypeName name="com.mashape.unirest.http.HttpResponse"/>
+<fullyQualifiedTypeName name="com.mashape.unirest.http.JsonNode"/>
+<fullyQualifiedTypeName name="kong.unirest.JsonNode"/>
+<fullyQualifiedTypeName name="kong.unirest.Unirest"/>
+<fullyQualifiedTypeName name="tato_bot_commands.Image"/>
+<fullyQualifiedTypeName name="kong.unirest.HttpResponse"/>
+<fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.net.ConnectException"/>
+<fullyQualifiedTypeName name="kong.unirest.json.JSONArray"/>
+<fullyQualifiedTypeName name="jdk.nashorn.internal.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="kong.unirest.json.JSONObject"/>
+</qualifiedTypeNameHistroy>

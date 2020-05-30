@@ -1,0 +1,31 @@
+package tato_bot_commands;
+
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import tato_bot.main;
+
+public class Search extends ListenerAdapter {
+	
+	private static final String API_KEY = "2DHKTY5FZE2N";
+	
+	public void onGuildMessageReceived (GuildMessageReceivedEvent event)
+	{
+		String[] args = event.getMessage().getContentRaw().split("\\s+");
+		String hug = "anime hug";
+		
+		if (args[0].equalsIgnoreCase(main.prefix + "hug"))
+		{
+			final String url = "https://api.tenor.com/v1/search?q=anime+hug%1$s&2DHKTY5FZE2N=%2$s&w=%3$s";
+			
+			
+			
+			EmbedBuilder search = new EmbedBuilder();
+			
+			search.setImage(url);
+			event.getChannel().sendMessage(search.build()).queue();
+			
+		}
+	}
+
+}

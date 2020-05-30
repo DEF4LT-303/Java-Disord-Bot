@@ -1,0 +1,39 @@
+package tato_bot_commands;
+
+
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import tato_bot.main;
+
+public class Image extends ListenerAdapter {
+	
+	
+	
+	public void onGuildMessageReceived (GuildMessageReceivedEvent event)
+	{
+		String[] args = event.getMessage().getContentRaw().split("\\s+");
+		
+		
+		
+		if (args[0].equalsIgnoreCase(main.prefix + "panda"))
+		{
+			final HttpResponse<JsonNode> image = Unirest.get("https://some-random-api.ml/img/panda").queryString("limit", 10).asJson();
+			
+			String pic = image.getBody().getObject().getString("link");
+			System.out.println(pic);
+			
+			EmbedBuilder em = new EmbedBuilder();
+
+			em.setImage(pic);
+			em.setColor(0xfcdf03);
+			event.getChannel().sendMessage(image.build()).queue();
+			em.clear();
+		}
+
+	}
+}

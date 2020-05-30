@@ -1,0 +1,34 @@
+package tato_bot_commands;
+
+
+import java.util.concurrent.ThreadLocalRandom;
+
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import tato_bot.main;
+
+public class Image extends ListenerAdapter {
+	
+	public String randomize(String url) {
+	    ThreadLocalRandom random = ThreadLocalRandom.current();
+	    return url + "&" + random.nextInt() + "=" + random.nextInt();
+	}
+	
+	public void onGuildMessageReceived (GuildMessageReceivedEvent event)
+	{
+		String[] args = event.getMessage().getContentRaw().split("\\s+");
+		
+		
+		
+		if (args[0].equalsIgnoreCase(main.prefix + "panda"))
+		{
+			EmbedBuilder image = new EmbedBuilder();
+
+			image.setImage(randomize("https://some-random-api.ml/img/panda"));
+			image.setColor(0xfcdf03);
+			event.getChannel().sendMessage(image.build()).queue();
+		}
+
+	}
+}
