@@ -6,12 +6,13 @@ import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
+import tato_bot_commands.Actions;
 import tato_bot_commands.Clear;
 import tato_bot_commands.Image;
 import tato_bot_commands.Info;
 import tato_bot_commands.Ping;
-import tato_bot_commands.Actions;
 import tato_bot_commands.Test;
+import tato_bot_commands.UrbanDictionary;
 
 public class main {
 	
@@ -31,6 +32,7 @@ public class main {
 		jda.addEventListener(new Test());
 		jda.addEventListener(new Image());
 		jda.addEventListener(new Actions());
+		jda.addEventListener(new UrbanDictionary());
 		
 	}
 
