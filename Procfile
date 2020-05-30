@@ -1,1 +1,1 @@
-worker: java -jar target/Discord_Java_Bot-0.0.1-SNAPSHOT-shaded.jar
+worker: java -jar target/bot-1.0-jar-with-dependencies.jar
