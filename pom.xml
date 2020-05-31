@@ -167,7 +167,7 @@
       <configuration>
         <appName>mytatobot</appName>
         <processTypes>
-          <web> java -jar target/bot-1.0-jar-with-dependencies.jar</web>
+          <web> java -jar target/Discord_Java_Bot-0.0.1-SNAPSHOT.jar</web>
         </processTypes>
       </configuration>
     </plugin>
