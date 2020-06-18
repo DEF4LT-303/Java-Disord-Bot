@@ -18,7 +18,12 @@ public class UrbanDictionary extends ListenerAdapter {
 		
 		if (args[0].equalsIgnoreCase(main.prefix + "ud"))
 		{
-			String term = args[1];
+			String term = "";
+			
+			for(int i = 1; i < args.length; i++) // takes multiple words
+			{
+				term += args[i]+"+";  //splits the words (ik its not efficient i suk...)
+			}
 			
 			HttpResponse<JsonNode> response = Unirest.get("https://mashape-community-urban-dictionary.p.rapidapi.com/define?term="+term)
 					.header("x-rapidapi-host", "mashape-community-urban-dictionary.p.rapidapi.com")
@@ -32,7 +37,7 @@ public class UrbanDictionary extends ListenerAdapter {
 			
 			EmbedBuilder ud = new EmbedBuilder();
 			
-			ud.setTitle("Defination of "+word);
+			ud.setTitle("Definition of "+word);
 			ud.setDescription(def);
 			ud.setColor(0x00aa11);
 			event.getChannel().sendMessage(ud.build()).queue();

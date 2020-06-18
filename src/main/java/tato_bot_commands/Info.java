@@ -16,10 +16,14 @@ public class Info extends ListenerAdapter {
 			EmbedBuilder info = new EmbedBuilder();
 			info.setTitle("🥔 Information 🥔");
 			info.setDescription("A bot under development...");
-			info.addField("Version", "```1.1```", false);
-		//	info.addField("Creator", "Tato#3453", false);
+			info.addField("Version", "1.1", false);
+			info.addField("Commands", "`-help`: Displays this message\n"
+					+ "`-ping`: Shows gateway ping\n"
+					+ "`-panda`: Shows a random picture of Panda\n"
+					+ "`-ud [term]`: Urban Dictionary\n", false);
+			info.addField("Actions", "`-hug [user]`: To hug user\n", false);
 			info.setColor(0xfcdf03);
-			info.setFooter("Created by Tato#3453", event.getMember().getUser().getAvatarUrl());
+			info.setFooter("Created by Tato#3453", event.getAuthor().getAvatarUrl());
 			
 		//	event.getChannel().sendTyping().queue();
 			event.getChannel().sendMessage(info.build()).queue();
